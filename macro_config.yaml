@@ -1,0 +1,32 @@
+program_hotkey:
+  - LeftShift
+  - LeftControl
+  - F6
+macros:
+  - macro_name: Test
+    macro_hotkey:
+      - S
+      - LeftControl
+    commands:
+      - !Loop
+        - 40
+        - - !SetMousePos
+            - 800
+            - 400
+          - LeftClick
+          - !Wait 1000
+      - !Wait 500
+  - macro_name: Test 2
+    macro_hotkey:
+      - F6
+      - LeftControl
+    commands:
+      - !PressKeyCombo
+        - LeftControl
+        - A
+  - macro_name: Test 2
+    macro_hotkey:
+      - J
+      - LeftControl
+    commands:
+      - !TextInput 'This is a test of the emergency broadcast system.'
